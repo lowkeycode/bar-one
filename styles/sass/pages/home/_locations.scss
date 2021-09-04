@@ -1,0 +1,52 @@
+.locations {
+  grid-column: 1 / -1;
+  background-color: $color-red--dark;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: $space-med 0;
+
+  .locations-copy {
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    &__heading {
+      @include formatText($font-primary, $fs-med, $lh-med, $lsp-sml, 700);
+    }
+
+    &__copy {
+      width: 80%;
+      @include formatText($font-primary, $fs-sml, $lh-sml, $lsp-xs, 300);
+    }
+
+    & .btn-read {
+      margin-top: $space-med;
+      @include formatSmlBtn($btn-sml-pad);
+    }
+  }
+
+  .img-container {
+    width: 40rem;
+    position: relative;
+    transform: translateY(5rem);
+  }
+
+  img {
+    max-width: 80%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .img-container::after {
+    position: absolute;
+    content: "";
+    width: calc(40rem - 20%);
+    height: calc(100% - 1.3rem);
+    background-color: $color-orange;
+    top: 2rem;
+    left: -1rem;
+  }
+}

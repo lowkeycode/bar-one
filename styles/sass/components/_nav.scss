@@ -1,0 +1,38 @@
+.nav-container {
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    height: inherit;
+    width: 40%;
+
+    &--link {
+      display: flex;
+      align-items: center;
+
+      & a:link,
+      a:visited {
+        cursor: pointer;
+        text-decoration: none;
+        color: $color-white;
+        @include formatText($font-primary, $fs-xs, $lh-xs, $lsp-xs, 700);
+        text-transform: uppercase;
+        transition: color 0.2s;
+      }
+
+      & a:hover,
+      a:focus {
+        color: $color-orange;
+      }
+    }
+
+    &--link:nth-of-type(3) {
+      font-size: 3.5rem;
+      font-weight: 300;
+    }
+  }
+}

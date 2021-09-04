@@ -1,0 +1,21 @@
+.hero {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    &--heading {
+      @include formatText($font-secondary, $fs-xl, 0, $lsp-med, 300);
+      color: $color-orange;
+    }
+
+    &--copy {
+      @include formatText($font-primary, $fs-lrg, $lh-lrg, $lsp-lrg, 300);
+      margin-left: 5px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.btn {
+  border: none;
+  background-color: $color--red;
+  font-family: $font-secondary;
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  cursor: pointer;
+
+  & a {
+    transition: color 0.2s;
+  }
+
+  & a:link,
+  a:visited {
+    text-decoration: none;
+    color: $color-white;
+  }
+}
+
+.btn:hover a,
+.btn:focus a {
+  color: $color-orange;
+}
