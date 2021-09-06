@@ -4,7 +4,6 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: $space-med 0;
 
   .locations-copy {
     width: 40rem;
@@ -35,7 +34,7 @@
   }
 
   img {
-    max-width: 80%;
+    max-width: 100%;
     position: relative;
     z-index: 1;
   }
@@ -43,7 +42,7 @@
   .img-container::after {
     position: absolute;
     content: "";
-    width: calc(40rem - 20%);
+    width: 100%;
     height: calc(100% - 1.3rem);
     background-color: $color-orange;
     top: 2rem;

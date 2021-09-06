@@ -1,21 +1,37 @@
-.hero {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+header {
+  position: relative;
 
-  &__container {
+  & .hero {
+    height: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    &--heading {
-      @include formatText($font-secondary, $fs-xl, 0, $lsp-med, 300);
-      color: $color-orange;
-    }
+    &__container {
+      display: flex;
+      flex-direction: column;
 
-    &--copy {
-      @include formatText($font-primary, $fs-lrg, $lh-lrg, $lsp-lrg, 300);
-      margin-left: 5px;
+      &--heading {
+        @include formatText($font-secondary, $fs-xl, 0, $lsp-med, 300);
+        color: $color-orange;
+        z-index: 1;
+      }
+
+      &--copy {
+        @include formatText($font-primary, $fs-lrg, $lh-lrg, $lsp-lrg, 300);
+        margin-left: 5px;
+        z-index: 1;
+      }
     }
+  }
+
+  & .img-container {
+    background: url("../images/header-box.jpg");
+    background-size: contain;
+    height: 80%;
+    width: 50%;
+    position: absolute;
+    bottom: -5rem;
+    right: 0;
   }
 }

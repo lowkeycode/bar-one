@@ -1,38 +1,3 @@
-// clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 80%, 0% 80%);
-// .nav {
-//   background: linear-gradient(
-//     145deg,
-//     rgba(16, 49, 119, 0.8),
-//     rgba(0, 0, 0, 0.8)
-//   );
-//   height: 80vh;
-//   width: 100vw;
-//   margin-top: -10rem;
-//   z-index: -2;
-// }
-
-// .img-container {
-//   width: 30rem;
-//   position: relative;
-//   z-index: 1;
-// }
-
-// .img-container img {
-//   width: 100%;
-//   z-index: 1;
-// }
-
-// .square {
-//   width: 100%;
-//   height: 100%;
-//   background-color: orange;
-//   position: absolute;
-//   display: inline;
-//   left: 1rem;
-//   top: 1rem;
-//   z-index: -1;
-// }
-
 body.home {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -45,7 +10,7 @@ body.home {
   background-image: url("../images/home-image-1.jpg");
   background-position: center;
   background-size: cover;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 85%, 0% 85%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 83%, 0% 83%);
 }
 
 main {
@@ -53,5 +18,9 @@ main {
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(7, min-content);
+  grid-template-rows: repeat(9, min-content);
+}
+
+body {
+  margin-bottom: -1rem;
 }

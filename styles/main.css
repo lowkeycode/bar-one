@@ -2,6 +2,8 @@ html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -351,6 +353,21 @@ h1 {
   color: #ff8327;
 }
 
+.copyright {
+  grid-column: 1/-1;
+  background-color: #2c2c2c;
+  padding: 0.5rem 0;
+}
+.copyright__copy {
+  font-family: "Chathura", sans-serif;
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: 1.9px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
+}
+
 body.home {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -363,19 +380,26 @@ body.home {
   background-image: url("../images/home-image-1.jpg");
   background-position: center;
   background-size: cover;
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 85%, 0% 85%);
-          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 85%, 0% 85%);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 83%, 0% 83%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 83%, 0% 83%);
 }
 
 main {
   grid-column: 1/-1;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(7, -webkit-min-content);
-  grid-template-rows: repeat(7, min-content);
+  grid-template-rows: repeat(9, -webkit-min-content);
+  grid-template-rows: repeat(9, min-content);
 }
 
-.hero {
+body {
+  margin-bottom: -1rem;
+}
+
+header {
+  position: relative;
+}
+header .hero {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -387,7 +411,7 @@ main {
       -ms-flex-align: center;
           align-items: center;
 }
-.hero__container {
+header .hero__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -396,21 +420,32 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.hero__container--heading {
+header .hero__container--heading {
   font-family: "Tulpen One", cursive;
   font-size: 13.1rem;
   line-height: 0;
   letter-spacing: 2.4px;
   font-weight: 300;
   color: #ff8327;
+  z-index: 1;
 }
-.hero__container--copy {
+header .hero__container--copy {
   font-family: "Chathura", sans-serif;
   font-size: 4.2rem;
   line-height: 4.7rem;
   letter-spacing: 2.6px;
   font-weight: 300;
   margin-left: 5px;
+  z-index: 1;
+}
+header .img-container {
+  background: url("../images/header-box.jpg");
+  background-size: contain;
+  height: 80%;
+  width: 50%;
+  position: absolute;
+  bottom: -5rem;
+  right: 0;
 }
 
 .home-overview {
@@ -496,7 +531,7 @@ main {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 2rem 0;
+  padding-top: 2rem;
 }
 .plan .img-container {
   width: 40rem;
@@ -505,14 +540,14 @@ main {
           transform: translateY(-4.5rem);
 }
 .plan img {
-  max-width: 80%;
+  max-width: 100%;
   position: relative;
   z-index: 1;
 }
 .plan .img-container::after {
   position: absolute;
   content: "";
-  width: calc(40rem - 20%);
+  width: 100%;
   height: calc(100% - 1.3rem);
   background-color: #ff8327;
   left: 1rem;
@@ -564,7 +599,6 @@ main {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 2rem 0;
 }
 .locations .locations-copy {
   width: 40rem;
@@ -608,14 +642,14 @@ main {
           transform: translateY(5rem);
 }
 .locations img {
-  max-width: 80%;
+  max-width: 100%;
   position: relative;
   z-index: 1;
 }
 .locations .img-container::after {
   position: absolute;
   content: "";
-  width: calc(40rem - 20%);
+  width: 100%;
   height: calc(100% - 1.3rem);
   background-color: #ff8327;
   top: 2rem;
@@ -675,11 +709,113 @@ main {
 
 .big-img {
   grid-column: 1/-1;
-  height: 40vh;
+  margin-bottom: -1rem;
 }
 .big-img .img-container {
   width: inherit;
 }
 .big-img .img-container img {
+  max-width: 100%;
+}
+
+.events {
+  grid-column: 1/-1;
+  background-color: #111010;
+  padding: 6rem 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.events .wrapper {
+  grid-column: 2/12;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.events .img-container {
+  width: 15rem;
+  position: relative;
+  z-index: 1;
+  margin-left: 2rem;
+}
+.events .img-container img {
+  max-width: 100%;
+  z-index: 1;
+}
+.events .img-container .background-square {
+  display: inline;
+  width: 100%;
+  height: 100%;
+  background-color: #ff8327;
+  position: absolute;
+  top: 0.7rem;
+  right: 1rem;
+  z-index: -1;
+}
+.events .events-copy {
+  width: 52rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.events .events-copy__heading {
+  font-family: "Chathura", sans-serif;
+  font-size: 3.4rem;
+  line-height: 2.9rem;
+  letter-spacing: 2.2px;
+  font-weight: 700;
+  color: #ff8327;
+}
+.events .events-copy__copy {
+  font-family: "Chathura", sans-serif;
+  font-size: 2rem;
+  line-height: 1.5rem;
+  letter-spacing: 1.9px;
+  font-weight: 300;
+  margin: 1rem 0 2rem 0;
+}
+.events .events-copy .btn-find {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding: 0.2rem 2rem;
+}
+
+.gallery {
+  grid-column: 1/-1;
+  background-color: #220303;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, -webkit-min-content);
+  grid-template-rows: repeat(2, min-content);
+  padding: 4rem 0;
+}
+.gallery .wrapper {
+  grid-column: 2/12;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.gallery .img-container {
+  width: 24rem;
+  overflow: hidden;
+  padding: 0.5rem;
+}
+.gallery .img-container img {
   max-width: 100%;
 }

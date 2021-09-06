@@ -1,0 +1,26 @@
+.gallery {
+  grid-column: 1 / -1;
+  background-color: $color-red--dark;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, min-content);
+  padding: $space-lrg 0;
+
+  & .wrapper {
+    grid-column: 2 / 12;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  & .img-container {
+    width: 24rem;
+    overflow: hidden;
+    padding: $space-xs;
+
+    & img {
+      max-width: 100%;
+    }
+  }
+}
