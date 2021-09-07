@@ -1,5 +1,16 @@
-header {
+.home header {
+  grid-column: 1 / -1;
+
+  background-image: url("../images/home-image-1.jpg");
+  background-position: center;
+  background-size: cover;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 83%, 0% 83%);
   position: relative;
+
+  & li:nth-of-type(1) a:link,
+  & li:nth-of-type(1) a:visited {
+    color: $color-orange;
+  }
 
   & .hero {
     height: 100%;

@@ -4,23 +4,10 @@ body.home {
   grid-template-rows: 90vh min-content;
 }
 
-.home header {
-  grid-column: 1 / -1;
-
-  background-image: url("../images/home-image-1.jpg");
-  background-position: center;
-  background-size: cover;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 83%, 0% 83%);
-}
-
-main {
+.home main {
   grid-column: 1 / -1;
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(9, min-content);
-}
-
-body {
-  margin-bottom: -1rem;
 }

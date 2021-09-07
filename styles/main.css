@@ -375,16 +375,7 @@ body.home {
   grid-template-rows: 90vh min-content;
 }
 
-.home header {
-  grid-column: 1/-1;
-  background-image: url("../images/home-image-1.jpg");
-  background-position: center;
-  background-size: cover;
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 83%, 0% 83%);
-          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 83%, 0% 83%);
-}
-
-main {
+.home main {
   grid-column: 1/-1;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -392,14 +383,19 @@ main {
   grid-template-rows: repeat(9, min-content);
 }
 
-body {
-  margin-bottom: -1rem;
-}
-
-header {
+.home header {
+  grid-column: 1/-1;
+  background-image: url("../images/home-image-1.jpg");
+  background-position: center;
+  background-size: cover;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 83%, 0% 83%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 83%, 0% 83%);
   position: relative;
 }
-header .hero {
+.home header li:nth-of-type(1) a:link, .home header li:nth-of-type(1) a:visited {
+  color: #ff8327;
+}
+.home header .hero {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -411,7 +407,7 @@ header .hero {
       -ms-flex-align: center;
           align-items: center;
 }
-header .hero__container {
+.home header .hero__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -420,7 +416,7 @@ header .hero__container {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-header .hero__container--heading {
+.home header .hero__container--heading {
   font-family: "Tulpen One", cursive;
   font-size: 13.1rem;
   line-height: 0;
@@ -429,7 +425,7 @@ header .hero__container--heading {
   color: #ff8327;
   z-index: 1;
 }
-header .hero__container--copy {
+.home header .hero__container--copy {
   font-family: "Chathura", sans-serif;
   font-size: 4.2rem;
   line-height: 4.7rem;
@@ -438,7 +434,7 @@ header .hero__container--copy {
   margin-left: 5px;
   z-index: 1;
 }
-header .img-container {
+.home header .img-container {
   background: url("../images/header-box.jpg");
   background-size: contain;
   height: 80%;
@@ -818,4 +814,158 @@ header .img-container {
 }
 .gallery .img-container img {
   max-width: 100%;
+}
+
+body.blog {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 75vh -webkit-min-content;
+  grid-template-rows: 75vh min-content;
+}
+
+.blog main {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(5, -webkit-min-content);
+  grid-template-rows: repeat(5, min-content);
+  background-color: #111010;
+  padding-top: 6rem;
+  height: 100rem;
+}
+
+.blog header {
+  grid-column: 1/-1;
+  background: url("../images/blog-header-1.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.blog header li:nth-of-type(4) a:link, .blog header li:nth-of-type(4) a:visited {
+  color: #ff8327;
+}
+.blog header .blog-heading {
+  font-family: "Chathura", sans-serif;
+  font-size: 6rem;
+  line-height: 2.9rem;
+  letter-spacing: 2.2px;
+  font-weight: 700;
+  position: absolute;
+  left: 10rem;
+  bottom: 30%;
+}
+
+.mission {
+  grid-column: 1/5;
+  grid-row: 1/3;
+  width: 20rem;
+  height: 46rem;
+  background-color: #220303;
+  justify-self: center;
+}
+
+.mission-container__img {
+  width: 25rem;
+  -webkit-transform: translate(-25%, -5%);
+          transform: translate(-25%, -5%);
+}
+.mission-container__img img {
+  max-width: 100%;
+}
+.mission-container__mission {
+  padding: 0 2rem;
+}
+.mission-container__mission--heading {
+  font-family: "Chathura", sans-serif;
+  font-size: 3.4rem;
+  line-height: 2.9rem;
+  letter-spacing: 2.2px;
+  font-weight: 700;
+}
+.mission-container__mission--copy {
+  font-family: "Chathura", sans-serif;
+  font-size: 2rem;
+  line-height: 1.5rem;
+  letter-spacing: 1.9px;
+  font-weight: 300;
+}
+.mission-container__mission span {
+  display: block;
+}
+.mission-container__mission a:link,
+.mission-container__mission a:visited {
+  text-decoration: none;
+  color: #ff8327;
+}
+.mission-container__posts {
+  padding: 0 2rem;
+  margin-top: 2rem;
+}
+.mission-container__posts--heading {
+  font-family: "Chathura", sans-serif;
+  font-size: 3.4rem;
+  line-height: 2.9rem;
+  letter-spacing: 2.2px;
+  font-weight: 700;
+}
+.mission-container__posts--list {
+  font-family: "Chathura", sans-serif;
+  font-size: 2rem;
+  line-height: 1.5rem;
+  letter-spacing: 1.9px;
+  font-weight: 300;
+  list-style: none;
+}
+.mission-container__posts span {
+  font-family: "Tulpen One", cursive;
+  font-size: 25px;
+  color: #ff0000;
+}
+
+.menu {
+  grid-column: 5/-1;
+  grid-row: 1/3;
+  margin-top: -15rem;
+  z-index: 1;
+  width: 55rem;
+  justify-self: end;
+}
+.menu__img-container {
+  -webkit-box-shadow: -1.5rem 1.5rem #ff8327;
+          box-shadow: -1.5rem 1.5rem #ff8327;
+  overflow: hidden;
+  width: 100%;
+}
+.menu__img-container img {
+  display: block;
+  max-width: 100%;
+}
+.menu__post {
+  border-left: 5px solid #ff8327;
+  border-bottom: 5px solid #ff8327;
+  padding: 4rem 6rem;
+  margin-left: -1.5rem;
+}
+.menu__post--heading {
+  font-family: "Chathura", sans-serif;
+  font-size: 3.4rem;
+  line-height: 2.9rem;
+  letter-spacing: 2.2px;
+  font-weight: 700;
+}
+.menu__post--date {
+  font-family: "Chathura", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.5rem;
+  letter-spacing: 1.9px;
+  font-weight: 300;
+  color: #ff8327;
+}
+.menu__post--copy {
+  font-family: "Chathura", sans-serif;
+  font-size: 2rem;
+  line-height: 1.5rem;
+  letter-spacing: 1.9px;
+  font-weight: 300;
+  margin-top: 2rem;
 }

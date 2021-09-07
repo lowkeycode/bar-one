@@ -1,0 +1,18 @@
+body.blog {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 75vh min-content;
+}
+
+.blog main {
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(5, min-content);
+  background-color: $color-black;
+  padding-top: $space-xl;
+
+  // ! Remove me / Dev purposes only
+  height: 100rem;
+}
