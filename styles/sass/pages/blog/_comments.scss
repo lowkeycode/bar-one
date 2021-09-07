@@ -1,0 +1,43 @@
+.comments {
+  grid-column: 6 / -1;
+  padding: $space-lrg $space-xl $space-med $space-med;
+
+  & h2 {
+    @include formatText($font-primary, $fs-med, $lh-med, $lsp-sml, 700);
+    margin-bottom: $space-sml;
+  }
+
+  & .comment {
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+
+    // Being lazy instead of refactoring here
+    &:nth-of-type(1) {
+      margin-bottom: $space-lrg;
+    }
+
+    &__img-container {
+      width: 5rem;
+      height: 5rem;
+
+      & img {
+        max-width: 100%;
+      }
+    }
+
+    &__copy {
+      width: 37rem;
+
+      &--heading {
+        @include formatText($font-primary, 2.5rem, $lh-sml, $lsp-xs, 300);
+        color: $color-orange;
+        margin-bottom: $space-xs;
+      }
+
+      &--copy {
+        @include formatText($font-primary, $fs-sml, $lh-sml, $lsp-xs, 300);
+      }
+    }
+  }
+}

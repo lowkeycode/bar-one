@@ -12,7 +12,4 @@ body.blog {
   grid-template-rows: repeat(5, min-content);
   background-color: $color-black;
   padding-top: $space-xl;
-
-  // ! Remove me / Dev purposes only
-  height: 100rem;
 }
