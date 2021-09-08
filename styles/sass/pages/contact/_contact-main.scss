@@ -1,0 +1,25 @@
+.contact-form {
+  background-color: $color-red--dark;
+  width: 50rem;
+
+
+  & .name-email {
+    & .name {
+      border-bottom: 2px solid $color-white;
+      color: $color-white;
+    }
+
+    & .email {
+      border-bottom: 2px solid $color-white;
+      color: $color-white;
+    }
+  }
+
+  & .comment-container {
+    & .comment {
+      border: 2px solid $color-white;
+      color: $color-white;
+    }
+  }
+
+}

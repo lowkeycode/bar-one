@@ -1,0 +1,15 @@
+body.contact {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  height: 100vh;
+  grid-template-rows: 1fr 1fr min-content;
+}
+
+.contact main {
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  background-color: $color-black;
+  padding-top: $space-xl;
+}

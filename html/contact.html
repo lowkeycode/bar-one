@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chathura:wght@400;700&family=Tulpen+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <title>Bar One | Blog</title>
+  </head>
+
+  <body class="contact">
+    <!-- HEADER -->
+    <header>
+      <!-- NAV -->
+      <nav class="nav-container">
+        <ul class="nav-container__links">
+          <li class="nav-container__links--link">
+            <a href="./index.html">Home</a>
+          </li>
+          <li class="nav-container__links--link"><a href="#">About</a></li>
+          <li class="nav-container__links--link">Bar-One</li>
+          <li class="nav-container__links--link">
+            <a href="./blog.html">Blog</a>
+          </li>
+          <li class="nav-container__links--link"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- HEADING -->
+      <h1 class="contact-heading">Get In Touch</h1>
+    </header>
+
+    <main>
+
+      <div class="social">
+
+      </div>
+      <form name="contactForm" class="contact-form">
+        <!-- NAME/EMAIL -->
+        <div class="name-email">
+          <!-- NAME -->
+          <input type="text" class="name" id="name" name="name" />
+          <label for="name">Name</label>
+          <!-- EMAIL -->
+          <input type="email" class="email" name="email" id="email" />
+          <label for="email">Email address</label>
+        </div>
+        <!-- COMMENT -->
+        <div class="comment-container">
+          <textarea class="comment" name="comment" id="comment"></textarea>
+          <label for="comment">Comment</label>
+        </div>
+        <!-- SUBMIT -->
+        <button type="submit" class="btn btn-post"><a href="#">Post Comment</a></button>
+      </form>
+     
+    </main>
+    <footer class="copyright">
+      <p class="copyright__copy">Copyright &copy; 2021 Hacker You</p>
+    </footer>
+  </body>
+</html>

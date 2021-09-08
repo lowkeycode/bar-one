@@ -7,6 +7,7 @@
 @import "components/nav";
 @import "components/btn";
 @import "components/copyright";
+@import "components/form";
 
 @import "pages/home/home";
 @import "pages/home/header";
@@ -24,3 +25,7 @@
 @import "pages/blog/menu";
 @import "pages/blog/comments";
 @import "pages/blog/post-comment";
+
+@import "pages/contact/contact";
+@import "pages/contact/header";
+@import "pages/contact/contact-main";
