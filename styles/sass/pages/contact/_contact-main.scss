@@ -1,7 +1,58 @@
-.contact-form {
-  background-color: $color-red--dark;
-  width: 50rem;
+.social {
+  grid-column: 2 / 4;
+  align-self: center;
+  height: 15rem;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__icons {
+    list-style: none;
+    display: flex;
+
+    &--icon {
+      margin-right: 1.2rem;
+    }
+  }
+
+  & a:link,
+  a:visited  {
+    text-decoration: none;
+    color: $color-white;
+    font-size: 1.5rem;
+    transition: color .2s;
+  }
+
+  & a:hover,
+  a:focus {
+    color: $color-orange;
+  }
+
+
+  &__email {
+    @include formatText($font-primary, $fs-sml, $lh-sml, $lsp-xs, 300);
+  }
+
+  &__address {
+    @include formatText($font-primary, $fs-sml, $lh-sml, $lsp-xs, 300);
+
+    & span {
+      display: block;
+    }
+  }
+}
+
+.contact-form {
+  grid-column: 5 / 12;
+
+  width: 95%;
+  background-color: $color-red--dark;
+  padding: $space-xl $space-lrg $space-lrg;
+  position: absolute;
+  top: -10rem;
+  right: 0;
+  box-shadow: 1.5rem 1.5rem $color-orange;
 
   & .name-email {
     & .name {
@@ -20,6 +71,10 @@
       border: 2px solid $color-white;
       color: $color-white;
     }
+  }
+
+  .btn-submit {
+    width: 100%;
   }
 
 }

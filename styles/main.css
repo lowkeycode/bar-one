@@ -1139,8 +1139,8 @@ body.contact {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   height: 100vh;
-  grid-template-rows: 1fr 1fr -webkit-min-content;
-  grid-template-rows: 1fr 1fr min-content;
+  grid-template-rows: 75vh 1fr -webkit-min-content;
+  grid-template-rows: 75vh 1fr min-content;
 }
 
 .contact main {
@@ -1148,7 +1148,8 @@ body.contact {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   background-color: #111010;
-  padding-top: 6rem;
+  padding: 6rem 0;
+  position: relative;
 }
 
 .contact header {
@@ -1157,6 +1158,9 @@ body.contact {
   background-size: cover;
   background-position: center;
   position: relative;
+}
+.contact header li:nth-of-type(5) a:link, .contact header li:nth-of-type(5) a:visited {
+  color: #ff8327;
 }
 .contact header .contact-heading {
   font-family: "Chathura", sans-serif;
@@ -1169,9 +1173,70 @@ body.contact {
   bottom: 30%;
 }
 
+.social {
+  grid-column: 2/4;
+  align-self: center;
+  height: 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.social__icons {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.social__icons--icon {
+  margin-right: 1.2rem;
+}
+.social a:link,
+.social a:visited {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+.social a:hover,
+.social a:focus {
+  color: #ff8327;
+}
+.social__email {
+  font-family: "Chathura", sans-serif;
+  font-size: 2rem;
+  line-height: 1.5rem;
+  letter-spacing: 1.9px;
+  font-weight: 300;
+}
+.social__address {
+  font-family: "Chathura", sans-serif;
+  font-size: 2rem;
+  line-height: 1.5rem;
+  letter-spacing: 1.9px;
+  font-weight: 300;
+}
+.social__address span {
+  display: block;
+}
+
 .contact-form {
+  grid-column: 5/12;
+  width: 95%;
   background-color: #220303;
-  width: 50rem;
+  padding: 6rem 4rem 4rem;
+  position: absolute;
+  top: -10rem;
+  right: 0;
+  -webkit-box-shadow: 1.5rem 1.5rem #ff8327;
+          box-shadow: 1.5rem 1.5rem #ff8327;
 }
 .contact-form .name-email .name {
   border-bottom: 2px solid #fff;
@@ -1184,4 +1249,7 @@ body.contact {
 .contact-form .comment-container .comment {
   border: 2px solid #fff;
   color: #fff;
+}
+.contact-form .btn-submit {
+  width: 100%;
 }

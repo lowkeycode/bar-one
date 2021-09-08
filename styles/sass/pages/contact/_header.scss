@@ -1,6 +1,11 @@
 .contact header {
   grid-column: 1 / -1;
 
+  & li:nth-of-type(5) a:link,
+  & li:nth-of-type(5) a:visited {
+    color: $color-orange;
+  }
+
   background: url("../images/contact-header-1.jpg");
   background-size: cover;
   background-position: center;
