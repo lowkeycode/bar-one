@@ -1,0 +1,89 @@
+.post-comment {
+  grid-column: 6 / -1;
+  width: 90%;
+  padding-bottom: $space-xl;
+
+  & .name-email {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    & > * {
+      width: 45%;
+      height: 2rem
+    }
+
+    & .name {
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid $color-orange;
+      color: $color-orange;
+      @include formatText($font-primary, $fs-sml, $lh-sml, $lsp-xs, 300);
+    }
+    
+    & .name + label {
+      @include formatText($font-primary, $fs-sml, $lh-sml, $lsp-xs, 300);
+      position: absolute;
+      top: -30px;
+      left: 30px;
+      transition: font-size 0.2s;
+    }
+
+    & .name:focus + label {
+      font-size: 2.5rem;
+    }
+    
+
+    & .email {
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid $color-orange;
+      color: $color-orange;
+      @include formatText($font-primary, $fs-sml, $lh-sml, $lsp-xs, 300);
+    }
+
+    & .email + label {
+      @include formatText($font-primary, $fs-sml, $lh-sml, $lsp-xs, 300);
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      transition: font-size 0.2s;
+    }
+
+    & .email:focus + label {
+      font-size: 2.5rem;
+    }
+    
+  }
+
+  & .comment-container {
+    position: relative;
+
+    & .comment {
+      margin: $space-med 0;
+      height: 12rem;
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      border: 2px solid $color-orange;
+      color: $color-orange;
+      @include formatText($font-primary, $fs-sml, $lh-sml, $lsp-xs, 300);
+    }
+
+    & .comment + label {
+      @include formatText($font-primary, $fs-sml, $lh-sml, $lsp-xs, 300);
+      position: absolute;
+      top: 60px;
+      left: 30px;
+      transition: all .2s
+    }
+
+    & .comment:focus + label {
+      transform: translateY(-58px);
+    }
+  }
+
+  & .btn-post {
+    width: 100%;
+  }
+}

@@ -163,6 +163,32 @@
           </div>
         </div>
       </section>
+
+      <!-- POST COMMENT -->
+      <section class="post-comment">
+        <!-- FORM -->
+        <form name="commentForm">
+          <!-- NAME/EMAIL -->
+          <div class="name-email">
+            <!-- NAME -->
+            <input type="text" class="name" id="name" name="name" />
+            <label for="name">Name</label>
+            <!-- EMAIL -->
+            <input type="email" class="email" name="email" id="email" />
+            <label for="email">Email address</label>
+          </div>
+          <!-- COMMENT -->
+          <div class="comment-container">
+            <textarea class="comment" name="comment" id="comment"></textarea>
+            <label for="comment">Comment</label>
+          </div>
+          <!-- SUBMIT -->
+          <button type="submit" class="btn btn-post"><a href="#">Post Comment</a></button>
+        </form>
+      </section>
     </main>
+    <footer class="copyright">
+      <p class="copyright__copy">Copyright &copy; 2021 Hacker You</p>
+    </footer>
   </body>
 </html>

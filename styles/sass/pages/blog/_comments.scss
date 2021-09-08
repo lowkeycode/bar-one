@@ -27,7 +27,7 @@
     }
 
     &__copy {
-      width: 37rem;
+      width: 38rem;
 
       &--heading {
         @include formatText($font-primary, 2.5rem, $lh-sml, $lsp-xs, 300);
