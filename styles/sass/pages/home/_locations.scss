@@ -5,47 +5,77 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
+  @media only screen and (max-width: $bp-lrg) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
   .locations-copy {
     width: 40rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    margin-top: $space-med;
+
+    @media only screen and (max-width: $bp-xl) {
+      width: 35rem;
+    }
+    @media only screen and (max-width: $bp-xl) {
+      padding: $space-med 0;
+    }
+    @media only screen and (max-width: $bp-sml) {
+      width: 90%;
+    }
 
     &__heading {
       @include formatText($font-primary, $fs-med, $lh-med, $lsp-sml, 700);
+
+      @media only screen and (max-width: $bp-xl) {
+        align-self: center;
+      }
     }
 
     &__copy {
       width: 80%;
       @include formatText($font-primary, $fs-sml, $lh-sml, $lsp-xs, 300);
+      @media only screen and (max-width: $bp-xl) {
+        align-self: center;
+      }
     }
 
     & .btn-read {
       margin-top: $space-med;
       @include formatSmlBtn($btn-sml-pad);
+
+      @media only screen and (max-width: $bp-xl) {
+        align-self: center;
+      }
     }
   }
 
   .img-container {
     width: 40rem;
-    position: relative;
     transform: translateY(5rem);
+    box-shadow: -1.2rem 1.2rem $color-orange;
+
+    @media only screen and (max-width: $bp-xl) {
+      width: 35rem;
+    }
+
+    @media only screen and (max-width: $bp-lrg) {
+      transform: none;
+    }
+
+    @media only screen and (max-width: $bp-sml) {
+      width: 90%;
+    }
   }
 
   img {
+    display: block;
     max-width: 100%;
-    position: relative;
     z-index: 1;
   }
-
-  .img-container::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: calc(100% - 1.3rem);
-    background-color: $color-orange;
-    top: 2rem;
-    left: -1rem;
-  }
+  
 }

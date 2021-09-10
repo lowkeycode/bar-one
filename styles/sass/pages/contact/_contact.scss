@@ -3,6 +3,11 @@ body.contact {
   grid-template-columns: repeat(12, 1fr);
   height: 100vh;
   grid-template-rows: 75vh 1fr min-content;
+
+  @media only screen and (max-width: $bp-sml) {
+    grid-template-rows: 75vh min-content min-content; 
+  }
+
 }
 
 .contact main {
@@ -13,4 +18,11 @@ body.contact {
   background-color: $color-black;
   padding: $space-xl 0;
   position: relative;
+
+  @media only screen and (max-width: $bp-sml) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $space-med;
+  }
 }

@@ -2,6 +2,10 @@
   grid-column: 6 / -1;
   padding: $space-lrg $space-xl $space-med $space-med;
 
+  @media only screen and (max-width: $bp-lrg) {
+    grid-column: 2 / 12;
+  }
+
   & h2 {
     @include formatText($font-primary, $fs-med, $lh-med, $lsp-sml, 700);
     margin-bottom: $space-sml;
@@ -12,6 +16,12 @@
     display: flex;
     justify-content: space-between;
 
+    @media only screen and (max-width: $bp-sml) {
+      height: min-content;
+      flex-direction: column;
+    }
+    
+
     // Being lazy instead of refactoring here
     &:nth-of-type(1) {
       margin-bottom: $space-lrg;
@@ -20,6 +30,11 @@
     &__img-container {
       width: 5rem;
       height: 5rem;
+      margin-right: $space-sml;
+      @media only screen and (max-width: $bp-lrg) {
+        margin-right: 0;
+        margin-bottom: $space-sml;
+      }
 
       & img {
         max-width: 100%;
@@ -28,6 +43,9 @@
 
     &__copy {
       width: 38rem;
+      @media only screen and (max-width: $bp-lrg) {
+        width: 100%;
+      }
 
       &--heading {
         @include formatText($font-primary, 2.5rem, $lh-sml, $lsp-xs, 300);

@@ -7,12 +7,26 @@
   flex-direction: column;
   justify-content: space-between;
 
+  @media only screen and (max-width: $bp-sml) {
+    align-items: center;
+  }
+  
+
   &__icons {
     list-style: none;
     display: flex;
+    
+
+    @media only screen and (max-width: $bp-sml) {
+      width: 100%;
+      justify-content: space-around;
+    }
 
     &--icon {
       margin-right: 1.2rem;
+      @media only screen and (max-width: $bp-sml) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -37,6 +51,10 @@
   &__address {
     @include formatText($font-primary, $fs-sml, $lh-sml, $lsp-xs, 300);
 
+    @media only screen and (max-width: $bp-sml) {
+        text-align: center;
+    }
+
     & span {
       display: block;
     }
@@ -53,6 +71,24 @@
   top: -10rem;
   right: 0;
   box-shadow: 1.5rem 1.5rem $color-orange;
+
+  @media only screen and (max-width: $bp-xl) {
+    width: 80%;
+  }
+
+  @media only screen and (max-width: $bp-lrg) {
+    top: -6rem;
+    padding: $space-lrg;
+  }
+
+  @media only screen and (max-width: $bp-sml) {
+    width: 90%;
+    padding: $space-lrg $space-med;
+    position: relative;
+    top: 0;
+    box-shadow: 1rem 1rem $color-orange;
+    margin: $space-med 0;
+  }
 
   & .name-email {
     & .name {

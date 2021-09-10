@@ -4,29 +4,35 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-top: $space-med;
+  padding: $space-med 0;
+  
+
+  @media only screen and (max-width: $bp-lrg) {
+    flex-direction: column;
+    align-items: center;
+  }
 
   .img-container {
     width: 40rem;
-    position: relative;
     transform: translateY(-4.5rem);
+    box-shadow: 1.2rem 1.2rem $color-orange;
+
+    @media only screen and (max-width: $bp-xl) {
+      width: 35rem;
+    }
+
+    @media only screen and (max-width: $bp-sml) {
+      width: 90%;
+    }
+
   }
 
   img {
+    display: block;
     max-width: 100%;
-    position: relative;
     z-index: 1;
   }
 
-  .img-container::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: calc(100% - 1.3rem);
-    background-color: $color-orange;
-    left: 1rem;
-    top: 2rem;
-  }
 
   .plan-copy {
     width: 40rem;
@@ -34,6 +40,18 @@
     flex-direction: column;
     justify-content: center;
 
+    @media only screen and (max-width: $bp-xl) {
+      width: 35rem;
+    }
+    
+    @media only screen and (max-width: $bp-lrg) {
+      align-items: center;
+    }
+
+    @media only screen and (max-width: $bp-sml) {
+      width: 90%;
+    }
+    
     &__heading {
       @include formatText($font-primary, $fs-med, $lh-med, $lsp-sml, 700);
     }
@@ -47,6 +65,11 @@
       align-self: flex-start;
       margin-top: $space-med;
       @include formatSmlBtn($btn-sml-pad);
+
+      @media only screen and (max-width: $bp-lrg) {
+        align-self: center;
+      }
     }
+
   }
 }

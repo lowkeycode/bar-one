@@ -6,10 +6,32 @@
   width: 55rem;
   justify-self: end;
 
+  @media only screen and (max-width: $bp-xl) {
+    width: 45rem;
+  }
+
+  @media only screen and (max-width: $bp-lrg) {
+    width: 100%;
+    grid-column: 7 / -1;
+  }
+
+  @media only screen and (max-width: $bp-sml) {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+  }
+
+  
+
   &__img-container {
     box-shadow: -1.5rem 1.5rem $color-orange;
     overflow: hidden;
     width: 100%;
+
+    @media only screen and (max-width: $bp-sml) {
+      width: 90%;
+      margin-left: 5%;
+      box-shadow: -1rem 1rem $color-orange;
+    }
     & img {
       display: block;
       max-width: 100%;
@@ -21,6 +43,14 @@
     border-bottom: 5px solid $color-orange;
     padding: $space-lrg $space-xl;
     margin-left: -1.5rem;
+
+    @media only screen and (max-width: $bp-lrg) {
+      padding: $space-med ;
+    }
+
+    @media only screen and (max-width: $bp-sml) {
+      padding: $space-lrg;
+    }
 
     &--heading {
       @include formatText($font-primary, $fs-med, $lh-med, $lsp-sml, 700);

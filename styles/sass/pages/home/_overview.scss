@@ -12,6 +12,10 @@
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+
+    @media only screen and (max-width: $bp-sml) {
+      grid-template-columns: repeat(auto-fit, minmax(60%, 1fr));
+    }
   }
 
   &__article {
@@ -19,24 +23,42 @@
     grid-template-columns: min-content 30rem;
     margin: $space-sml;
 
+    @media only screen and (max-width: $bp-med) {
+      grid-template-columns: min-content 90%;
+      margin: $space-med 0;
+
+    }
+
     &--1 {
       // border: 1px solid green;
       justify-self: end;
+      @media only screen and (max-width: $bp-med) {
+        justify-self: center;
+      }
     }
 
     &--2 {
       // border: 1px solid blue;
       justify-self: start;
+      @media only screen and (max-width: $bp-med) {
+        justify-self: center;
+      }
     }
 
     &--3 {
       // border: 1px solid purple;
       justify-self: end;
+      @media only screen and (max-width: $bp-med) {
+        justify-self: center;
+      }
     }
 
     &--4 {
       // border: 1px solid orange;
       justify-self: start;
+      @media only screen and (max-width: $bp-med) {
+        justify-self: center;
+      }
     }
 
     &--icon {
@@ -49,9 +71,17 @@
       align-items: center;
       grid-column: 1 / 2;
       margin-right: 1rem;
+      @media only screen and (max-width: $bp-sml) {
+        width: 2rem;
+        height: 2rem;
+      }
 
       & .fas {
         font-size: 1.5rem;
+        @media only screen and (max-width: $bp-sml) {
+          font-size: 1.2rem;
+        }
+
       }
     }
 

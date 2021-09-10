@@ -16,6 +16,7 @@
     &--heading {
       @include formatText($font-primary, $fs-med, $lh-med, $lsp-sml, 700);
       color: $color-orange;
+      text-align: center;
     }
 
     &--copy {

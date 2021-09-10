@@ -15,8 +15,10 @@
   </head>
 
   <body class="blog">
+    <a href="#main" class="sr-only">Skip to main content</a>
     <!-- HEADER -->
     <header>
+      <ion-icon class="hamburger" name="menu-outline"></ion-icon>
       <!-- NAV -->
       <nav class="nav-container">
         <ul class="nav-container__links">
@@ -35,13 +37,13 @@
       <h1 class="blog-heading">Blog</h1>
     </header>
 
-    <main>
+    <main id="main">
       <!-- MISSION -->
       <aside class="mission">
         <div class="mission-container">
           <!-- IMG -->
           <div class="mission-container__img">
-            <img src="../images/sidebar-image.jpg" alt="" />
+            <img src="../images/sidebar-image.jpg" alt="A bartender pouring a pint glass with amber beer from the tap" />
           </div>
           <!-- MISSION -->
           <div class="mission-container__mission">
@@ -68,7 +70,7 @@
       <section class="menu">
         <!-- IMG -->
         <div class="menu__img-container">
-          <img src="../images/post-image.jpg" alt="" />
+          <img src="../images/post-image.jpg" alt="A green salad, bruschetta and a couple appetizers sitting on a smooth black counter for serving" />
         </div>
         <!-- POST -->
         <div class="menu__post">
@@ -190,5 +192,7 @@
     <footer class="copyright">
       <p class="copyright__copy">Copyright &copy; 2021 Hacker You</p>
     </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 </html>

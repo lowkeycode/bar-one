@@ -26,12 +26,18 @@
         @include formatText($font-secondary, $fs-xl, 0, $lsp-med, 300);
         color: $color-orange;
         z-index: 1;
+        @media only screen and (max-width: $bp-sml) {
+          font-size: 10rem;
+        }
       }
 
       &--copy {
         @include formatText($font-primary, $fs-lrg, $lh-lrg, $lsp-lrg, 300);
         margin-left: 5px;
         z-index: 1;
+        @media only screen and (max-width: $bp-sml) {
+          font-size: 3rem;
+        }
       }
     }
   }
@@ -44,5 +50,9 @@
     position: absolute;
     bottom: -5rem;
     right: 0;
+
+    @media only screen and (max-width: $bp-sml) {
+      display: none;
+    }
   }
 }

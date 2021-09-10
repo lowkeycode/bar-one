@@ -18,8 +18,10 @@
     <title>Bar One | Home</title>
   </head>
   <body class="home">
+  <a href="#main" class="sr-only">Skip to main content</a>
     <!-- HEADER -->
     <header>
+      <ion-icon class="hamburger" name="menu-outline"></ion-icon>
       <!-- NAV -->
       <nav class="nav-container">
         <ul class="nav-container__links">
@@ -42,7 +44,7 @@
       <div class="img-container"></div>
     </header>
 
-    <main>
+    <main id="main">
       <!-- OVERVIEW -->
       <section class="home-overview">
         <div class="wrapper">
@@ -178,7 +180,6 @@
               src="../images/small-box-image.jpg"
               alt="Two long haired people talking close together and laughing over drinks"
             />
-            <div class="background-square"></div>
           </div>
           <!-- COPY -->
           <div class="events-copy">
@@ -227,5 +228,7 @@
     <footer class="copyright">
       <p class="copyright__copy">Copyright &copy; 2021 Hacker You</p>
     </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 </html>

@@ -20,3 +20,23 @@ $space-xs: 0.5rem;
 
 // SMALL BUTTON PADDING
 $btn-sml-pad: 0.2rem 2rem;
+
+
+
+// BREAK POINTS
+
+// 1344/16 = 84em | 1344px
+$bp-xl: 84em;
+// 1144/16 = 71.5em | 1144px
+$bp-lrg: 71.5em;
+// 950/16 = 59.38em | 950px
+$bp-med: 59.38em;
+//  768/16 = 48em | 768px
+$bp-sml: 48em;
+
+
+
+
+// @media only screen and (max-width: $bp-sml) {
+
+// }

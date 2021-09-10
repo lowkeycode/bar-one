@@ -1,20 +1,25 @@
 .contact header {
   grid-column: 1 / -1;
+  
+  background: url("../images/contact-header-1.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
 
   & li:nth-of-type(5) a:link,
   & li:nth-of-type(5) a:visited {
     color: $color-orange;
   }
 
-  background: url("../images/contact-header-1.jpg");
-  background-size: cover;
-  background-position: center;
-  position: relative;
-
   & .contact-heading {
     @include formatText($font-primary, 6rem, $lh-med, $lsp-sml, 700);
     position: absolute;
     left: 10rem;
     bottom: 30%;
+
+    @media only screen and (max-width: $bp-sml) {
+      left: 5rem;
+      bottom: 50%;
+    }
   }
 }
