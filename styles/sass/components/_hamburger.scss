@@ -5,10 +5,63 @@
     display: block;
     position: absolute;
     font-size: 3rem;
-    right: 2rem;
+    right: 3rem;
     top: 2rem;
     z-index: 2;
     cursor: pointer;
   }
 
+}
+
+.bar {
+  width: 45px;
+  height: 3px;
+  background-color: $color-white;
+  margin: 6px 0;
+  border-radius: 8px;
+}
+
+.bar2 {
+  opacity: 1;
+  transition: all 0.25s;
+}
+
+.active .bar1 {
+  animation: squishDown 0.5s both;
+}
+
+.active .bar2 {
+  opacity: 0;
+}
+
+.active .bar3 {
+  animation: squishUp 0.5s both;
+}
+
+@keyframes squishDown {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(13px);
+  }
+
+  100% {
+    transform: rotate(45deg) translate(5px, 8px);
+  }
+}
+
+@keyframes squishUp {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-13px);
+  }
+
+  100% {
+    transform: rotate(-45deg) translate(5px, -8px);
+  }
 }

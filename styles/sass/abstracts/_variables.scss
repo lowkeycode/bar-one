@@ -10,7 +10,6 @@ $color-red--dark: #220303;
 $color-orange: #ff8327;
 
 // SPACING
-
 $space-huge: 8rem;
 $space-xl: 6rem;
 $space-lrg: 4rem;
@@ -21,10 +20,7 @@ $space-xs: 0.5rem;
 // SMALL BUTTON PADDING
 $btn-sml-pad: 0.2rem 2rem;
 
-
-
 // BREAK POINTS
-
 // 1344/16 = 84em | 1344px
 $bp-xl: 84em;
 // 1144/16 = 71.5em | 1144px
@@ -33,10 +29,3 @@ $bp-lrg: 71.5em;
 $bp-med: 59.38em;
 //  768/16 = 48em | 768px
 $bp-sml: 48em;
-
-
-
-
-// @media only screen and (max-width: $bp-sml) {
-
-// }

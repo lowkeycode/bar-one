@@ -351,13 +351,98 @@ h1 {
     display: block;
     position: absolute;
     font-size: 3rem;
-    right: 2rem;
+    right: 3rem;
     top: 2rem;
     z-index: 2;
     cursor: pointer;
   }
 }
 
+.bar {
+  width: 45px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+  border-radius: 8px;
+}
+
+.bar2 {
+  opacity: 1;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.active .bar1 {
+  -webkit-animation: squishDown 0.5s both;
+          animation: squishDown 0.5s both;
+}
+
+.active .bar2 {
+  opacity: 0;
+}
+
+.active .bar3 {
+  -webkit-animation: squishUp 0.5s both;
+          animation: squishUp 0.5s both;
+}
+
+@-webkit-keyframes squishDown {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(13px);
+            transform: translateY(13px);
+  }
+  100% {
+    -webkit-transform: rotate(45deg) translate(5px, 8px);
+            transform: rotate(45deg) translate(5px, 8px);
+  }
+}
+
+@keyframes squishDown {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(13px);
+            transform: translateY(13px);
+  }
+  100% {
+    -webkit-transform: rotate(45deg) translate(5px, 8px);
+            transform: rotate(45deg) translate(5px, 8px);
+  }
+}
+@-webkit-keyframes squishUp {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-13px);
+            transform: translateY(-13px);
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(5px, -8px);
+            transform: rotate(-45deg) translate(5px, -8px);
+  }
+}
+@keyframes squishUp {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-13px);
+            transform: translateY(-13px);
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(5px, -8px);
+            transform: rotate(-45deg) translate(5px, -8px);
+  }
+}
 .btn {
   border: none;
   background-color: #bf2603;
