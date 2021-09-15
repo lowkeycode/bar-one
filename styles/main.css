@@ -343,18 +343,84 @@ h1 {
   font-weight: 300;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  background-color: rgba(17, 16, 16, 0.95);
+}
+.overlay .mob-nav {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.overlay .mob-nav__item {
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.overlay .mob-nav__item a:link,
+.overlay .mob-nav__item a:visited {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Chathura", sans-serif;
+  font-size: 3.4rem;
+}
+.overlay .mob-nav__item a:hover,
+.overlay .mob-nav__item a:focus {
+  color: #ff8327;
+}
+.overlay .mob-nav__item:nth-of-type(1) {
+  font-size: 4.2rem;
+}
+.overlay .mob-nav__item:not(:last-of-type) {
+  border-bottom: 2px solid #2c2c2c;
+}
+
+.slide-right {
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.slide-left {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+
 .hamburger {
   display: none;
 }
 @media only screen and (max-width: 48em) {
   .hamburger {
     display: block;
-    position: absolute;
+    position: fixed;
     font-size: 3rem;
     right: 3rem;
     top: 2rem;
-    z-index: 2;
     cursor: pointer;
+    z-index: 5;
   }
 }
 
@@ -582,6 +648,7 @@ body.home {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 90vh -webkit-min-content;
   grid-template-rows: 90vh min-content;
+  position: relative;
 }
 
 .home main {
