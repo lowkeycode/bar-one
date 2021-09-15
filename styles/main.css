@@ -1192,6 +1192,8 @@ body.home {
 }
 .gallery .wrapper {
   grid-column: 2/12;
+}
+.gallery .wrapper ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

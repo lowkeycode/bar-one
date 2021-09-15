@@ -9,9 +9,11 @@
   & .wrapper {
     grid-column: 2 / 12;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    & ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
 
   & .img-container {
