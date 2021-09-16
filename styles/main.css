@@ -1539,7 +1539,6 @@ body.blog {
 }
 @media only screen and (max-width: 71.5em) {
   .comments .comment__img-container {
-    margin-right: 0;
     margin-bottom: 1rem;
   }
 }
