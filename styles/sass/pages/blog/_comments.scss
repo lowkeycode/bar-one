@@ -8,7 +8,7 @@
 
   & h2 {
     @include formatText($font-primary, $fs-med, $lh-med, $lsp-sml, 700);
-    margin-bottom: $space-sml;
+    margin-bottom: $space-med;
   }
 
   & .comment {

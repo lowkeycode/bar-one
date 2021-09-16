@@ -1507,7 +1507,7 @@ body.blog {
   line-height: 2.9rem;
   letter-spacing: 2.2px;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .comments .comment {
   height: -webkit-min-content;
@@ -1583,7 +1583,7 @@ body.blog {
 }
 @media only screen and (max-width: 71.5em) {
   .post-comment {
-    margin-top: 6rem;
+    margin-top: 1rem;
   }
 }
 .post-comment .name-email .name {
