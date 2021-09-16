@@ -20,20 +20,31 @@
 
   <body class="contact">
     <a href="#main" class="sr-only">Skip to main content</a>
+    <!-- MOBILE NAV -->
+    <div class="overlay slide-right">
+      <ul class="mob-nav">
+        <li class="mob-nav__item">Bar-One</li>
+        <li class="mob-nav__item"><a href="../index.html">Home</a></li>
+        <li class="mob-nav__item"><a href="#">About</a></li>
+        <li class="mob-nav__item"><a href="./blog.html">Blog</a></li>
+        <li class="mob-nav__item"><a href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <!-- HAMBURGER -->
+    <div class="hamburger">
+      <div class="bar bar1"></div>
+      <div class="bar bar2"></div>
+      <div class="bar bar3"></div>
+    </div>
     <!-- HEADER -->
     <header>
-      <ion-icon class="hamburger" name="menu-outline"></ion-icon>
       <!-- NAV -->
       <nav class="nav-container">
         <ul class="nav-container__links">
-          <li class="nav-container__links--link">
-            <a href="../index.html">Home</a>
-          </li>
+          <li class="nav-container__links--link"><a href="../index.html">Home</a></li>
           <li class="nav-container__links--link"><a href="#">About</a></li>
           <li class="nav-container__links--link">Bar-One</li>
-          <li class="nav-container__links--link">
-            <a href="./blog.html">Blog</a>
-          </li>
+          <li class="nav-container__links--link"><a href="./blog.html">Blog</a></li>
           <li class="nav-container__links--link"><a href="#">Contact</a></li>
         </ul>
       </nav>
@@ -46,16 +57,16 @@
       <div class="social">
         <ul class="social__icons">
           <li class="social__icons--icon">
-            <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i><span class="sr-only">Facebook</span></a>
           </li>
           <li class="social__icons--icon">
-            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i><span class="sr-only">Instagram</span></a>
           </li>
           <li class="social__icons--icon">
-            <a href="htttps://www.twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="htttps://www.twitter.com"><i class="fab fa-twitter"></i><span class="sr-only">Twitter</span></a>
           </li>
           <li class="social__icons--icon">
-            <a href="https://www.whatapp.com"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.whatsapp.com"><i class="fab fa-whatsapp"></i><span class="sr-only">Whats App</span></a>
           </li>
         </ul>
 
@@ -93,5 +104,6 @@
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="../js/index.js"></script>
   </body>
 </html>

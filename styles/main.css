@@ -343,21 +343,172 @@ h1 {
   font-weight: 300;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  background-color: rgba(17, 16, 16, 0.95);
+}
+.overlay .mob-nav {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.overlay .mob-nav__item {
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.overlay .mob-nav__item a:link,
+.overlay .mob-nav__item a:visited {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Chathura", sans-serif;
+  font-size: 3.4rem;
+}
+.overlay .mob-nav__item a:hover,
+.overlay .mob-nav__item a:focus {
+  color: #ff8327;
+}
+.overlay .mob-nav__item:nth-of-type(1) {
+  font-size: 4.2rem;
+}
+.overlay .mob-nav__item:not(:last-of-type) {
+  border-bottom: 2px solid #2c2c2c;
+}
+
+.slide-right {
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.slide-left {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+
 .hamburger {
   display: none;
 }
 @media only screen and (max-width: 48em) {
   .hamburger {
     display: block;
-    position: absolute;
+    position: fixed;
     font-size: 3rem;
-    right: 2rem;
+    right: 3rem;
     top: 2rem;
-    z-index: 2;
     cursor: pointer;
+    z-index: 5;
   }
 }
 
+.bar {
+  width: 45px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+  border-radius: 8px;
+}
+
+.bar2 {
+  opacity: 1;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.active .bar1 {
+  -webkit-animation: squishDown 0.5s both;
+          animation: squishDown 0.5s both;
+}
+
+.active .bar2 {
+  opacity: 0;
+}
+
+.active .bar3 {
+  -webkit-animation: squishUp 0.5s both;
+          animation: squishUp 0.5s both;
+}
+
+@-webkit-keyframes squishDown {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(13px);
+            transform: translateY(13px);
+  }
+  100% {
+    -webkit-transform: rotate(45deg) translate(5px, 8px);
+            transform: rotate(45deg) translate(5px, 8px);
+  }
+}
+
+@keyframes squishDown {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(13px);
+            transform: translateY(13px);
+  }
+  100% {
+    -webkit-transform: rotate(45deg) translate(5px, 8px);
+            transform: rotate(45deg) translate(5px, 8px);
+  }
+}
+@-webkit-keyframes squishUp {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-13px);
+            transform: translateY(-13px);
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(5px, -8px);
+            transform: rotate(-45deg) translate(5px, -8px);
+  }
+}
+@keyframes squishUp {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-13px);
+            transform: translateY(-13px);
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(5px, -8px);
+            transform: rotate(-45deg) translate(5px, -8px);
+  }
+}
 .btn {
   border: none;
   background-color: #bf2603;
@@ -497,6 +648,7 @@ body.home {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 90vh -webkit-min-content;
   grid-template-rows: 90vh min-content;
+  position: relative;
 }
 
 .home main {
@@ -1107,6 +1259,8 @@ body.home {
 }
 .gallery .wrapper {
   grid-column: 2/12;
+}
+.gallery .wrapper ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1385,7 +1539,6 @@ body.blog {
 }
 @media only screen and (max-width: 71.5em) {
   .comments .comment__img-container {
-    margin-right: 0;
     margin-bottom: 1rem;
   }
 }

@@ -19,18 +19,30 @@
   </head>
   <body class="home">
   <a href="#main" class="sr-only">Skip to main content</a>
+  <div class="overlay slide-right">
+    <ul class="mob-nav">
+      <li class="mob-nav__item">Bar-One</li>
+      <li class="mob-nav__item"><a href="./index.html">Home</a></li>
+      <li class="mob-nav__item"><a href="#">About</a></li>
+      <li class="mob-nav__item"><a href="./html/blog.html">Blog</a></li>
+      <li class="mob-nav__item"><a href="./html/contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="hamburger">
+    <div class="bar bar1"></div>
+    <div class="bar bar2"></div>
+    <div class="bar bar3"></div>
+  </div>
     <!-- HEADER -->
     <header>
-      <ion-icon class="hamburger" name="menu-outline"></ion-icon>
+      
       <!-- NAV -->
       <nav class="nav-container">
         <ul class="nav-container__links">
           <li class="nav-container__links--link"><a href="#">Home</a></li>
           <li class="nav-container__links--link"><a href="#">About</a></li>
           <li class="nav-container__links--link">Bar-One</li>
-          <li class="nav-container__links--link">
-            <a href="./html/blog.html">Blog</a>
-          </li>
+          <li class="nav-container__links--link"><a href="./html/blog.html">Blog</a></li>
           <li class="nav-container__links--link"><a href="./html/contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -51,7 +63,7 @@
           <!-- ARTICLE 1 -->
           <article class="home-overview__article home-overview__article--1">
             <div class="home-overview__article--icon">
-              <i class="fas fa-home"></i>
+              <i class="fas fa-home" aria-hidden="true"></i>
             </div>
             <h2 class="home-overview__article--heading">New Space</h2>
             <p class="home-overview__article--copy">
@@ -64,7 +76,7 @@
           <!-- ARTICLE 2 -->
           <article class="home-overview__article home-overview__article--2">
             <div class="home-overview__article--icon">
-              <i class="fas fa-user"></i>
+              <i class="fas fa-user" aria-hidden="true"></i>
             </div>
             <h2 class="home-overview__article--heading">Community</h2>
             <p class="home-overview__article--copy">
@@ -77,7 +89,7 @@
           <!-- ARTICLE 3 -->
           <article class="home-overview__article home-overview__article--3">
             <div class="home-overview__article--icon">
-              <i class="fas fa-file"></i>
+              <i class="fas fa-file" aria-hidden="true"></i>
             </div>
             <h2 class="home-overview__article--heading">Blog</h2>
             <p class="home-overview__article--copy">
@@ -90,7 +102,7 @@
           <!-- ARTICLE 4 -->
           <article class="home-overview__article home-overview__article--4">
             <div class="home-overview__article--icon">
-              <i class="fas fa-phone"></i>
+              <i class="fas fa-phone" aria-hidden="true"></i>
             </div>
             <h2 class="home-overview__article--heading">Get In Touch</h2>
             <p class="home-overview__article--copy">
@@ -107,7 +119,7 @@
         <!-- IMG 1 -->
         <div class="img-container">
           <img
-            src="../images/left-image.jpg"
+            src="./images/left-image.jpg"
             alt="A rustic pub with various types of hanging, single lightbulbs illuminating the liquor and clean glasses"
           />
         </div>
@@ -140,7 +152,7 @@
 
         <div class="img-container">
           <img
-            src="../images/right-image.jpg"
+            src="./images/right-image.jpg"
             alt="Two people sitting at the end of a bar chatting and watching a television above the bar"
           />
         </div>
@@ -165,7 +177,7 @@
       <section class="big-img">
         <div class="img-container">
           <img
-            src="../images/banner-image.jpg"
+            src="./images/banner-image.jpg"
             alt="A pint glass full of draft beer sitting on a wooden bar counter"
           />
         </div>
@@ -177,7 +189,7 @@
           <!-- IMAGE -->
           <div class="img-container">
             <img
-              src="../images/small-box-image.jpg"
+              src="./images/small-box-image.jpg"
               alt="Two long haired people talking close together and laughing over drinks"
             />
           </div>
@@ -200,27 +212,29 @@
       <!-- GALLERY -->
       <section class="gallery">
         <div class="wrapper">
-          <!-- IMG 1 -->
-          <div class="img-container">
-            <img
-              src="../images/gallery-image-1.jpg"
-              alt="The liquor wall of a bar with a chalboard artistically displaying daily specials"
-            />
-          </div>
-          <!-- IMG 2 -->
-          <div class="img-container">
-            <img
-              src="../images/gallery-image-2.jpg"
-              alt="Close up of a bacon burger on a  biroche bun with a side of hand-cut fries and dipping sauces"
-            />
-          </div>
-          <!-- IMG3 -->
-          <div class="img-container">
-            <img
-              src="../images/gallery-image-3.jpg"
-              alt="A homemade caesar in a tall textured glass with halved baby tomatoes on a skewer for garnish"
-            />
-          </div>
+          <ul>
+            <!-- IMG 1 -->
+            <div class="img-container">
+              <img
+                src="./images/gallery-image-1.jpg"
+                alt="The liquor wall of a bar with a chalboard artistically displaying daily specials"
+              />
+            </div>
+            <!-- IMG 2 -->
+            <div class="img-container">
+              <img
+                src="./images/gallery-image-2.jpg"
+                alt="Close up of a bacon burger on a  biroche bun with a side of hand-cut fries and dipping sauces"
+              />
+            </div>
+            <!-- IMG3 -->
+            <div class="img-container">
+              <img
+                src="./images/gallery-image-3.jpg"
+                alt="A homemade caesar in a tall textured glass with halved baby tomatoes on a skewer for garnish"
+              />
+            </div>
+          </ul>
         </div>
       </section>
       <!-- FOOTER -->
@@ -230,5 +244,6 @@
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

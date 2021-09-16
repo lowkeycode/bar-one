@@ -16,20 +16,31 @@
 
   <body class="blog">
     <a href="#main" class="sr-only">Skip to main content</a>
+    <!-- MOBILE NAV -->
+    <div class="overlay slide-right">
+      <ul class="mob-nav">
+        <li class="mob-nav__item">Bar-One</li>
+        <li class="mob-nav__item"><a href="../index.html">Home</a></li>
+        <li class="mob-nav__item"><a href="#">About</a></li>
+        <li class="mob-nav__item"><a href="./blog.html">Blog</a></li>
+        <li class="mob-nav__item"><a href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <!-- HAMBURGER -->
+    <div class="hamburger">
+      <div class="bar bar1"></div>
+      <div class="bar bar2"></div>
+      <div class="bar bar3"></div>
+    </div>
     <!-- HEADER -->
     <header>
-      <ion-icon class="hamburger" name="menu-outline"></ion-icon>
       <!-- NAV -->
       <nav class="nav-container">
         <ul class="nav-container__links">
-          <li class="nav-container__links--link">
-            <a href="../index.html">Home</a>
-          </li>
+          <li class="nav-container__links--link"><a href="../index.html">Home</a></li>
           <li class="nav-container__links--link"><a href="#">About</a></li>
           <li class="nav-container__links--link">Bar-One</li>
-          <li class="nav-container__links--link">
-            <a href="./blog.html">Blog</a>
-          </li>
+          <li class="nav-container__links--link"><a href="./blog.html">Blog</a></li>
           <li class="nav-container__links--link"><a href="./contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -119,7 +130,7 @@
           <h2>Comments:</h2>
 
           <!-- COMMENT 1 -->
-          <div class="comment">
+          <article class="comment">
             <!-- IMG -->
             <div class="comment__img-container">
               <img
@@ -140,10 +151,10 @@
                 Ipsa nesciunt?
               </p>
             </div>
-          </div>
+          </article>
 
           <!-- COMMENT2 -->
-          <div class="comment">
+          <article class="comment">
             <!-- IMG -->
             <div class="comment__img-container">
               <img
@@ -162,7 +173,7 @@
                 nemo? Lorem, ipsum dolor sit amet.
               </p>
             </div>
-          </div>
+          </article>
         </div>
       </section>
 
@@ -185,7 +196,8 @@
             <label for="comment">Comment</label>
           </div>
           <!-- SUBMIT -->
-          <button type="submit" class="btn btn-post"><a href="#">Post Comment</a></button>
+          <!-- <a href="">Post Comment</a> -->
+          <button type="submit" class="btn btn-post">Post Comment</button>
         </form>
       </section>
     </main>
@@ -194,5 +206,6 @@
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="../js/index.js"></script>
   </body>
 </html>
