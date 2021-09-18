@@ -8,19 +8,12 @@
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;
   cursor: pointer;
+  color: $color-white;
 
-  & a {
-    transition: color 0.2s;
-  }
-
-  & a:link,
-  a:visited {
-    text-decoration: none;
-    color: $color-white;
-  }
+  
 }
 
-.btn:hover a,
-.btn:focus a {
+.btn:hover,
+.btn:focus {
   color: $color-orange;
 }

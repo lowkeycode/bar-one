@@ -519,19 +519,11 @@ h1 {
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;
   cursor: pointer;
-}
-.btn a {
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-}
-.btn a:link,
-.btn a:visited {
-  text-decoration: none;
   color: #fff;
 }
 
-.btn:hover a,
-.btn:focus a {
+.btn:hover,
+.btn:focus {
   color: #ff8327;
 }
 
