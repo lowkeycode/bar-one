@@ -22,15 +22,28 @@ hamburger.classList.toggle('active');
 toggleMobMenu();
 }
 
+const randomInt = function() {
+  return Math.floor(Math.random() * 100);
+};
 
 
 
 const addComment = function (e) {
   e.preventDefault();
   const name = document.querySelector('#name').value;
-  const email = document.querySelector('#email').value;
   const comment = document.querySelector('#comment').value;
 
+  const date = new Date(Date.now());
+
+  const currentWeekday = new Intl.DateTimeFormat('en-us', {
+    weekday: 'long',
+  }).format(date);
+  const currentMonth = new Intl.DateTimeFormat('en-us', {
+    month: 'long',
+  }).format(date);
+  const currentYear = new Intl.DateTimeFormat('en-us', {
+    year: 'numeric',
+  }).format(date);
 
   const commentPost = document.createElement('article');
   commentPost.classList.add('comment');
@@ -41,7 +54,7 @@ const addComment = function (e) {
   const postImg = document.createElement('img');
   commentImgContainer.appendChild(postImg);
 
-  postImg.src = 'https://picsum.photos/200';
+  postImg.src = `https://randomuser.me/api/portraits/men/${randomInt()}.jpg`;
   postImg.alt = `User's profile image`;
 
   const commentCopy = document.createElement('div');
@@ -49,7 +62,7 @@ const addComment = function (e) {
 
   const commentHeading = document.createElement('h3');
   commentHeading.classList.add('comment__copy--heading');
-  commentHeading.textContent = `DATE HERE ${name}`;
+  commentHeading.textContent = `${currentWeekday} ${currentMonth}, ${currentYear} by ${name}`;
 
   const commentCopyCopy = document.createElement('p');
   commentCopyCopy.classList.add('comment__copy--copy');
@@ -61,33 +74,10 @@ const addComment = function (e) {
   commentPost.appendChild(commentImgContainer);
   commentPost.appendChild(commentCopy);
 
-
-
   const commentsContainer = document.querySelector('.comments-container');
   commentsContainer.append(commentPost);
   
 
-
-  // const markup = `
-  //   <article class="comment">
-  //     <div class="comment__img-container">
-  //       <img
-  //         src="../images/comment-image-1.jpg"
-  //         alt="User's profile image"
-  //       />
-  //     </div>
-  //     <div class="comment__copy">
-  //       <h3 class="comment__copy--heading">
-  //         Tuesday October 9th, 2021 by Sulaire
-  //       </h3>
-  //       <p class="comment__copy--copy">
-          
-  //       </p>
-  //     </div>
-  //   </article>
-  // `;
-
-  console.log(name, email, comment);
 }
 
 

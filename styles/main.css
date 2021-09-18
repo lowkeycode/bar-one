@@ -629,10 +629,10 @@ form .comment-container .comment + label {
   left: 30px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  opacity: 1;
 }
 form .comment-container .comment:focus + label {
-  -webkit-transform: translateY(-58px);
-          transform: translateY(-58px);
+  opacity: 0;
 }
 
 body.home {
