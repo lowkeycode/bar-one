@@ -33,6 +33,7 @@ const addComment = function (e) {
   const name = document.querySelector('#name').value;
   const comment = document.querySelector('#comment').value;
 
+
   const date = new Date(Date.now());
 
   const currentWeekday = new Intl.DateTimeFormat('en-us', {
@@ -95,7 +96,9 @@ const addComment = function (e) {
   const commentsContainer = document.querySelector('.comments-container');
   commentsContainer.append(commentPost);
   
-
+  document.querySelector('#name').value = '';
+  document.querySelector('#email').value = '';
+  document.querySelector('#comment').value = '';
 }
 
 
