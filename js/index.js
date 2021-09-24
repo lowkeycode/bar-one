@@ -41,9 +41,27 @@ const addComment = function (e) {
   const currentMonth = new Intl.DateTimeFormat('en-us', {
     month: 'long',
   }).format(date);
+  const currentDate = new Intl.DateTimeFormat('en-us', {
+    day: 'numeric',
+  }).format(date);
   const currentYear = new Intl.DateTimeFormat('en-us', {
     year: 'numeric',
   }).format(date);
+
+  const pr = new Intl.PluralRules('en-US', {
+    type: 'ordinal'
+  });
+  const suffixes = new Map([
+    ['one',   'st'],
+    ['two',   'nd'],
+    ['few',   'rd'],
+    ['other', 'th'],
+  ]);
+  const formatOrdinals = (n) => {
+    const rule = pr.select(n);
+    const suffix = suffixes.get(rule);
+    return `${n}${suffix}`;
+  };
 
   const commentPost = document.createElement('article');
   commentPost.classList.add('comment');
@@ -62,7 +80,7 @@ const addComment = function (e) {
 
   const commentHeading = document.createElement('h3');
   commentHeading.classList.add('comment__copy--heading');
-  commentHeading.textContent = `${currentWeekday} ${currentMonth}, ${currentYear} by ${name}`;
+  commentHeading.textContent = `${currentWeekday} ${currentMonth} ${formatOrdinals(currentDate)}, ${currentYear} by ${name}`;
 
   const commentCopyCopy = document.createElement('p');
   commentCopyCopy.classList.add('comment__copy--copy');
